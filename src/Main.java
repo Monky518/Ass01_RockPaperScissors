@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class Main
 {
@@ -26,8 +24,6 @@ public class Main
         String playerA;
         String playerB;
         String challengeAgain;
-
-        Timer timer = new Timer();
         boolean youFool = false;
 
         do
@@ -155,7 +151,6 @@ public class Main
                 {
                     continuePlaying = false;
                     validInput = true;
-                    System.out.println("Come back anytime to battle again!");
                 }
                 else if (challengeAgain.equalsIgnoreCase("L"))
                 {
@@ -176,13 +171,14 @@ public class Main
                 }
                 else
                 {
+                    continuePlaying = false;
                     trash = challengeAgain;
                     challengeAgain = "";
                     System.out.println("You incorrectly entered " + trash);
-                    continuePlaying = false;
-                    validInput = false;
                 }
             } while(!validInput);
         } while(continuePlaying);
+
+        System.out.println("Come back anytime to battle again!");
     }
 }
