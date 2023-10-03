@@ -33,8 +33,9 @@ public class Main
             {
                 System.out.print("Player A, choose your weapon [R P S]: ");
                 playerA = in.nextLine();
-                if (playerA.equalsIgnoreCase("R") || playerA.equalsIgnoreCase("P") || playerA.equalsIgnoreCase("S"))
+                if (playerA.matches("[RrPpSs]"))
                 {
+                    // playerA.matches("[RrPrSs]")
                     validInput = true;
                 }
                 else if (playerA.equalsIgnoreCase("C"))
@@ -65,7 +66,7 @@ public class Main
             {
                 System.out.print("Player B, choose your weapon [R P S]: ");
                 playerB = in.nextLine();
-                if (playerB.equalsIgnoreCase("R") || playerB.equalsIgnoreCase("P") || playerB.equalsIgnoreCase("S"))
+                if (playerB.matches("[RrPpSs]"))
                 {
                     validInput = true;
                 }
@@ -151,10 +152,6 @@ public class Main
                 {
                     continuePlaying = false;
                     validInput = true;
-                }
-                else if (challengeAgain.equalsIgnoreCase("L"))
-                {
-                    System.out.println("Well that was a little rude, please do not L the opponent; Let's try that again...");
                 }
                 else if (challengeAgain.equalsIgnoreCase("C"))
                 {
