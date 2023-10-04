@@ -170,7 +170,6 @@ public class Main
                 {
                     continuePlaying = false;
                     trash = challengeAgain;
-                    challengeAgain = "";
                     System.out.println("You incorrectly entered " + trash);
                 }
             } while(!validInput);
